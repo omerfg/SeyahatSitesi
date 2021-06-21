@@ -1,0 +1,19 @@
+﻿@using TravelWebSite.Models.Siniflar
+@model List<About>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layoutt.cshtml";
+}
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>Hakkımızda</h3>
+
+            @foreach (var x in Model)
+            {
+                <img src="@x.ResimUrl" alt="" />
+                <p>@x.Aciklama</p>
+            }
+        </div>
+    </div>
+</div>
